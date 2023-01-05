@@ -1,0 +1,256 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+body
+{
+  background-color: bisque;
+}
+#navbar
+{
+  display: flex;
+  height: 75px;
+  width: 100%;
+  background-color: rgb(37, 2, 37);
+  line-height: 75px;
+}
+nav h1
+{
+  color: white;
+  font-size: 35px;
+  margin-left: 30px;
+  padding-right: 10px;
+}
+nav img
+{
+  height: 60px;
+  margin-top: 5px;
+  /* line-height: 75px; */
+}
+
+#maindiv
+{
+  margin-top: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#maindiv a
+{
+  text-decoration: none;
+  color: white;
+}
+.cards
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:320px;
+  width: 250px;
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  font-size: 40px;
+  color: white;
+  background-color: rgb(7, 167, 7);
+  box-shadow: 5px 10px sienna;
+}
+.cards:hover
+{
+  transform: scale(1.1);
+}
+
+#savebtn
+{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+#contentrow
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 1300px;
+  /* border: 2px solid black; */
+  margin: auto;
+  padding: 20px;
+}
+#subbuttons
+{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 40px;
+}
+#entry
+{
+  margin-right: 20px;
+}
+#subjectsdiv
+{
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black; */
+  /* margin: auto; */
+  width: 500px;
+  /* height: 470px; */
+  padding: 10px;
+  border-radius: 60px;
+}
+
+textarea
+{
+  padding: 5px;
+  margin-top: 25px;
+  font-size: 18px;
+}
+#scroll
+{
+  margin-top: 40px;
+}
+
+#loadit
+{
+  display: flex;
+  flex-direction: row;
+  margin-right: 40px;
+  height: 40px;
+  margin-top: 20px;
+}
+.button-3 {
+  /* margin-top: 200px; */
+  margin-left: 20px;
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  /* padding: 6px 16px; */
+  padding: 10px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+
+
+/* CSS */
+.button-18 {
+  align-items: center;
+  background-color: #4896e4;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+#aibtn
+{
+  background-color: coral;
+}
+#manprobtn
+{
+  background-color: blueviolet;
+}
+#dbmsbtn
+{
+  background-color: brown;
+}
+#edpbtn
+{
+  background-color:rgb(121, 189, 121);
+}
+#cnbtn
+{
+  background-color: orchid;
+}
+#msatbtn
+{
+  background-color: rebeccapurple;
+}
+
+#aibtn:hover,#manprobtn:hover,#dbmsbtn:hover,#edpbtn:hover,#cnbtn:hover,#msatbtn:hover
+{
+  transform: scale(1.2);
+}
