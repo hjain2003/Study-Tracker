@@ -253,4 +253,108 @@ textarea
 #aibtn:hover,#manprobtn:hover,#dbmsbtn:hover,#edpbtn:hover,#cnbtn:hover,#msatbtn:hover
 {
   transform: scale(1.2);
+} 
+
+/*///////////////////////////////////////////////////////////TODOOOOOOOOO////////////////////////////////////////// */
+
+#todomaindiv
+{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+#todobox
+{
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  padding: 10px;
+  width: 400px;
+  height: 430px;
+  align-items: center;
+  background-color: rgb(216, 165, 216);
+}
+#inputbtn
+{
+  margin-top: 10px;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: row;
+}
+#todoitem
+{
+    height: 30px;
+    width: 260px;
+    padding: 7px;
+    font-size: 15px;
+    /* border-radius: 15px; */
+    border:none;
+    text-decoration: none;
+    border-radius: 7px;
+    /* outline-color: rgba(83,211,185,70%); */
+    outline:0;
+    background-color: rgb(227, 176, 115);
+}
+#todoitem:focus
+{
+    border-bottom: 3px solid rgba(108, 71, 1, 0.7);
+}
+#addbtn
+{
+    width:60px;
+    height: 48px;
+    line-height: 30px;
+    border-radius: 17px;
+    cursor:pointer;
+    /* box-shadow: 3px 3px rgb(83,211,185); */
+    text-decoration: none;
+    background-color: rgb(147, 212, 212);
+    padding: 0px;
+    font-size: 30px;
+    border: 2px solid blue;
+    margin-left: 10px;
+    /* margin-bottom: 30px; */
+}
+
+#addbtn:active
+{
+    transform: scale(0.8);
+}
+
+#itemsdisplay
+{
+  margin-top: 25px;
+  background-color: rgb(255, 235, 119);
+  width: 350px;
+  height: 300px;
+  border-radius: 12px;
+  /* border: 2px solid black; */
+  padding: 10px;
+  padding-left: 10px;
+}
+ol
+{
+  font-size: 17px;
+  list-style-type: none;
+}
+#cross
+{
+  height:20px;
+  width: 20px;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 6px;
+}
+#cross:active
+{
+  transform: scale(0.8);
+}
+#makerow
+{
+  display: flex;
+  flex-direction: row;
 }

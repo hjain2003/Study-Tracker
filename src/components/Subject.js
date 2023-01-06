@@ -92,7 +92,7 @@ const Subject = () => {
                     <button className="button-18" id="msatbtn" onClick={showmsatcontent}>MSAT</button>
                 </div>
 
-                <textarea cols="25" rows="20" id="entry" value={entrytext} onChange={change}></textarea>
+                <textarea cols="25" rows="20" id="entry" value={entrytext} onChange={change} placeholder='//New Note'></textarea>
 
                 <div id="subjectsdiv">
                     <Flickity
