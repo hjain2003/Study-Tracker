@@ -7,6 +7,7 @@ A webapp to help you manage your studies
   <li> Note Maker
   <li> TodoList
   <li> Important Dates Manager/Reminder
+  <li> StopWatch
   <li> Motivational quotes
 </ul>
 
