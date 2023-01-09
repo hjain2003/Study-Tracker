@@ -16,6 +16,10 @@ const Features = () => {
       <a href="Stopwatch.js"><div id="stopwatch" className="cards"><img src="https://img.icons8.com/office/160/null/timer.png"/>
       <span class="imgbottom">Stopwatch</span>
       </div></a>
+
+      <a href="Motivation.js"><div id="motivation" className="cards"> <img src="https://img.icons8.com/color/160/null/ambition.png"/>
+      <span class="imgbottom">Motivation</span>
+      </div></a>
     </div> 
   )
 }

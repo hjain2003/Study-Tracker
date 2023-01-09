@@ -6,6 +6,7 @@ import {Route, Routes } from 'react-router-dom';
 import Todo from './components/Todo';
 import Calendar from './components/Calendar';
 import Stopwatch from './components/Stopwatch';
+import Motivation from './components/Motivation';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <Route path='/todo.js' element={<Todo/>}/>
     <Route path='/calendar.js' element={<Calendar/>}/>
     <Route path='/stopwatch.js' element={<Stopwatch/>}/>
+    <Route path='/motivation.js' element={<Motivation/>}/>
    </Routes>
    </>
   );
