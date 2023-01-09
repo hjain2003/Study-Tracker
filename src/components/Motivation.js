@@ -7,7 +7,7 @@ const Motivation = () => {
     
     const getquotes=async()=>{
         try{
-            let url='https://api.quotable.io/random?tags=success,famous-quotes';
+            let url='https://api.quotable.io/random?tags=success';
 
             const res=await fetch(url);
             const data=await res.json();
