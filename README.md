@@ -4,7 +4,7 @@ A webapp to help you manage your studies
 <br><br>
 <b>Features:</b>
 <ul>
-  <li> Authentication Page
+  <li> Authentication Page (under development)
   <li> Note Maker
   <li> TodoList
   <li> Important Dates Manager/Reminder
