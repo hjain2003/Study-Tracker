@@ -632,3 +632,57 @@ form input
   height: 30px;
   padding: 5px;
 }
+
+#logincontainer
+{
+  display: flex;
+  /* margin: auto; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+#logincontainer input
+{
+  height: 25px;
+  padding: 5px;
+}
+#loginbox
+{
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  width: 280px;
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+hr
+{
+  opacity: 50%;
+  color: gray;
+}
+#already
+{
+  display: flex;
+  margin: auto;
+}
+
+#errormsg
+{
+  display: flex;
+  margin: auto;
+  font-style: italic;
+  color: red;
+}
+#loginbtn:disabled{
+  background-color: gray !important;
+}
+
+#erroronsignup
+{
+  color: red;
+  font-weight: 400;
+}
