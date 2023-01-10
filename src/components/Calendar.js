@@ -1,51 +1,53 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
-import data from './Mockdata.json'
+import Tableentries from './Tableentries';
 
-// const getlocalitems=()=>{
-//   let entries=localStorage.getItem('dateentry');
-//   console.log(entries);
+const getlocalitems=()=>{
+  let entries=localStorage.getItem('eventdetails');
+  console.log(entries);
 
-//   if(entries){
-//     return JSON.parse(localStorage.getItem('dateentry'));
-//   }
-//   else{
-//     return [];
-//   }
-// }
+  if(entries){
+    return JSON.parse(entries);
+  }
+  else{
+    return [];
+  }
+}
 
 const Calendar = () => {
-  const[dateevent,setdateevent]=useState(data);
-  const[formdetails,setformdetails]=useState({
-    date:'',
-    event:''
-  })
+ 
+  const [eventdetails,seteventdetails]=useState(getlocalitems());
+  const [date,setdate]=useState('');
+  const [event,setevent]=useState('');
 
-  const handleformchange=(e)=>{
-    e.preventDefault();
-
-    const fieldname=e.target.getAttribute('name');
-    const fieldvalue=e.target.value;
-
-    const newformdata={...formdetails};
-    newformdata[fieldname]=fieldvalue;
-
-    setformdetails(newformdata);
-  };
+  const handletextchange=(e)=>{
+    setdate(e.target.value);
+  }
+  const handletextareachange=(e)=>{
+    setevent(e.target.value);
+  }
 
   const handleformsubmit=(e)=>{
     e.preventDefault();
 
-    const newdetail={
-      date:formdetails.date,
-      event:formdetails.event
-    };
-
-    const newdetails=[...dateevent,newdetail]
-    setdateevent(newdetails);
-
-    localStorage.setItem('dateentry',JSON.stringify(formdetails));
+    let newdetails={
+      date,
+      event
+    }
+    seteventdetails([...eventdetails,newdetails]);
+    setdate('');
+    setevent('');
   }
+  
+  const deletetableentry=(event)=>{
+    const filteredevent=eventdetails.filter((element,index)=>{
+      return element.event!==event
+    })
+    seteventdetails(filteredevent); 
+  }
+  useEffect(()=>{
+    localStorage.setItem('eventdetails',JSON.stringify(eventdetails));
+  },[eventdetails])
   return (
     <>
     <Navbar/>
@@ -55,15 +57,11 @@ const Calendar = () => {
     <tr>
       <th>Date</th>
       <th>Event</th>
+      <th>Delete entry</th>
     </tr>
   </thead>
   <tbody>
-    {dateevent.map((val)=>(
-      <tr>
-        <td>{val.date}</td>
-        <td>{val.event}</td>
-      </tr>
-    ))}
+    <Tableentries entries={eventdetails} deletetableentry={deletetableentry}/>
   </tbody>
 </table>
 
@@ -72,10 +70,10 @@ const Calendar = () => {
       <h3>Add new entry :</h3>
       <br />
       <form>
-        <input type="text" name="date" placeholder='Enter a date' onChange={handleformchange}/>
-        <textarea name="event" id="" cols="37" rows="5" placeholder='Enter event details...' onChange={handleformchange}/>
+        <input type="date" name="date" placeholder='Enter a date' onChange={handletextchange} value={date}/>
+        <textarea name="event" id="" cols="37" rows="5" placeholder='Enter event details...' onChange={handletextareachange} value={event}/>
       </form>&nbsp;
-    <button className='button-18' onClick={handleformsubmit}>Add</button>
+    <button className='button-18' onClick={handleformsubmit} type='submit'>Add</button>
     </div>
     </div>
     </>

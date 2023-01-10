@@ -1,37 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar';
+import inspquotes from './Quotes.json'
 
 const Motivation = () => {
 
-    const [quotes,setquotes]=useState("");
-    
-    const getquotes=async()=>{
-        try{
-            let url='https://api.quotable.io/random?tags=success,famous-quotes';
+        const [dispquote,setdisplayquote]=useState("");
 
-            const res=await fetch(url);
-            const data=await res.json();
-
-            console.log(data.content);
-            setquotes(data.content);
-
-        }catch(error){
-            console.log(error);
-        }
-    };
-
-    useEffect(()=>{
-        getquotes();
-    },[])
+        let r1 = 0;
+        let r2 = 49;
+        let randy = r1 + (r2 - r1) * Math.random();
+        let rand = Math.round(randy);
+        console.log(inspquotes.quotes[0].quote);
+        console.log(inspquotes.quotes.length);
 
     const pagereload=()=>{
         window.location.reload();
     }
+    
+    useEffect(()=>{
+        setdisplayquote(inspquotes.quotes[rand].quote);
+    })
+    
   return (
     <>
         <Navbar/>
         <div id="displayquotes">
-            <b>{quotes}</b>
+            <b>{dispquote}</b>
             <br />
             <button onClick={pagereload} className="button-3">Need More Motivation !</button>
         </div>
