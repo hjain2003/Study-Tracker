@@ -4,7 +4,15 @@ import inspquotes from './Quotes.json'
 
 const Motivation = () => {
 
+<<<<<<< HEAD
         const [dispquote,setdisplayquote]=useState("");
+=======
+    const [quotes,setquotes]=useState("");
+    
+    const getquotes=async()=>{
+        try{
+            let url='https://api.quotable.io/random?tags=success';
+>>>>>>> f5a1c2cc8db7fa382bf68c4ad3e2d02a7ce9ec09
 
         let r1 = 0;
         let r2 = 49;
