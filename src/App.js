@@ -23,7 +23,7 @@ function App() {
 
    <>
    <Routes>
-    <Route path='/Study-Tracker' element={<SignupPage/>}/>
+    <Route path='/' element={<SignupPage/>}/>
     {/* <Route path='/' element={<div><Navbar/><Features/></div>}/> */}
     <Route path='/Home.js' element={<Home/>}/>
     <Route path='/Loginpage.js' element={<Loginpage/>}/>
